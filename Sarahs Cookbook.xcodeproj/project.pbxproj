@@ -13,6 +13,7 @@
 		ABE097AD249F6493002AED98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABE097AB249F6493002AED98 /* Main.storyboard */; };
 		ABE097AF249F6495002AED98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABE097AE249F6495002AED98 /* Assets.xcassets */; };
 		ABE097B2249F6495002AED98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABE097B0249F6495002AED98 /* LaunchScreen.storyboard */; };
+		ABE097BE249F9B6D002AED98 /* RecipeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE097BD249F9B6D002AED98 /* RecipeData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		ABE097AE249F6495002AED98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ABE097B1249F6495002AED98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ABE097B3249F6495002AED98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ABE097BD249F9B6D002AED98 /* RecipeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +60,9 @@
 			children = (
 				ABE097A5249F6493002AED98 /* AppDelegate.swift */,
 				ABE097A7249F6493002AED98 /* SceneDelegate.swift */,
-				ABE097BB249F6B24002AED98 /* Controllers */,
-				ABE097BC249F6B30002AED98 /* Views */,
+				ABE097BF249F9BA8002AED98 /* Model */,
+				ABE097BC249F6B30002AED98 /* View */,
+				ABE097BB249F6B24002AED98 /* Controller */,
 				ABE097AE249F6495002AED98 /* Assets.xcassets */,
 				ABE097B0249F6495002AED98 /* LaunchScreen.storyboard */,
 				ABE097B3249F6495002AED98 /* Info.plist */,
@@ -67,20 +70,28 @@
 			path = "Sarahs Cookbook";
 			sourceTree = "<group>";
 		};
-		ABE097BB249F6B24002AED98 /* Controllers */ = {
+		ABE097BB249F6B24002AED98 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				ABE097A9249F6493002AED98 /* MenuController.swift */,
 			);
-			path = Controllers;
+			path = Controller;
 			sourceTree = "<group>";
 		};
-		ABE097BC249F6B30002AED98 /* Views */ = {
+		ABE097BC249F6B30002AED98 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				ABE097AB249F6493002AED98 /* Main.storyboard */,
 			);
-			path = Views;
+			path = View;
+			sourceTree = "<group>";
+		};
+		ABE097BF249F9BA8002AED98 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ABE097BD249F9B6D002AED98 /* RecipeData.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,6 +166,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABE097AA249F6493002AED98 /* MenuController.swift in Sources */,
+				ABE097BE249F9B6D002AED98 /* RecipeData.swift in Sources */,
 				ABE097A6249F6493002AED98 /* AppDelegate.swift in Sources */,
 				ABE097A8249F6493002AED98 /* SceneDelegate.swift in Sources */,
 			);
