@@ -58,13 +58,29 @@
 			children = (
 				ABE097A5249F6493002AED98 /* AppDelegate.swift */,
 				ABE097A7249F6493002AED98 /* SceneDelegate.swift */,
-				ABE097A9249F6493002AED98 /* MenuController.swift */,
-				ABE097AB249F6493002AED98 /* Main.storyboard */,
+				ABE097BB249F6B24002AED98 /* Controllers */,
+				ABE097BC249F6B30002AED98 /* Views */,
 				ABE097AE249F6495002AED98 /* Assets.xcassets */,
 				ABE097B0249F6495002AED98 /* LaunchScreen.storyboard */,
 				ABE097B3249F6495002AED98 /* Info.plist */,
 			);
 			path = "Sarahs Cookbook";
+			sourceTree = "<group>";
+		};
+		ABE097BB249F6B24002AED98 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				ABE097A9249F6493002AED98 /* MenuController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		ABE097BC249F6B30002AED98 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				ABE097AB249F6493002AED98 /* Main.storyboard */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
