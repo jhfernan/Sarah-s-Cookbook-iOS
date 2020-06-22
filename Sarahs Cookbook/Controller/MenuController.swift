@@ -7,12 +7,16 @@
 //
 
 import UIKit
+import CLTypingLabel
 
 class MenuController: UIViewController {
-
+    
+    @IBOutlet weak var titleLabel: CLTypingLabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        titleLabel.text = "Sarah's Cookbook"
     }
 
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8FFA6A2F90D446BB4A525D8F /* Pods_Sarahs_Cookbook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27359B32F88DF269ECB56CA6 /* Pods_Sarahs_Cookbook.framework */; };
 		ABE097A6249F6493002AED98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE097A5249F6493002AED98 /* AppDelegate.swift */; };
 		ABE097A8249F6493002AED98 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE097A7249F6493002AED98 /* SceneDelegate.swift */; };
 		ABE097AA249F6493002AED98 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE097A9249F6493002AED98 /* MenuController.swift */; };
@@ -20,6 +21,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		27359B32F88DF269ECB56CA6 /* Pods_Sarahs_Cookbook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sarahs_Cookbook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4FAB3882AFF3E1C64B8A5BAD /* Pods-Sarahs Cookbook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sarahs Cookbook.debug.xcconfig"; path = "Target Support Files/Pods-Sarahs Cookbook/Pods-Sarahs Cookbook.debug.xcconfig"; sourceTree = "<group>"; };
+		8D61DF8456E0BC8BB3F574C1 /* Pods-Sarahs Cookbook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sarahs Cookbook.release.xcconfig"; path = "Target Support Files/Pods-Sarahs Cookbook/Pods-Sarahs Cookbook.release.xcconfig"; sourceTree = "<group>"; };
 		ABE097A2249F6493002AED98 /* Sarahs Cookbook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sarahs Cookbook.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABE097A5249F6493002AED98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABE097A7249F6493002AED98 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,17 +43,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FFA6A2F90D446BB4A525D8F /* Pods_Sarahs_Cookbook.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		28FED547A5B695E35C9EFD93 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				27359B32F88DF269ECB56CA6 /* Pods_Sarahs_Cookbook.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		389F1805706F9567D83D5864 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4FAB3882AFF3E1C64B8A5BAD /* Pods-Sarahs Cookbook.debug.xcconfig */,
+				8D61DF8456E0BC8BB3F574C1 /* Pods-Sarahs Cookbook.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		ABE09799249F6493002AED98 = {
 			isa = PBXGroup;
 			children = (
 				ABE097A4249F6493002AED98 /* Sarahs Cookbook */,
 				ABE097A3249F6493002AED98 /* Products */,
+				389F1805706F9567D83D5864 /* Pods */,
+				28FED547A5B695E35C9EFD93 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,9 +135,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ABE097B6249F6495002AED98 /* Build configuration list for PBXNativeTarget "Sarahs Cookbook" */;
 			buildPhases = (
+				25E52841F447EC8330C6429A /* [CP] Check Pods Manifest.lock */,
 				ABE0979E249F6493002AED98 /* Sources */,
 				ABE0979F249F6493002AED98 /* Frameworks */,
 				ABE097A0249F6493002AED98 /* Resources */,
+				4BCFC803551BCE5944019A65 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -168,6 +195,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		25E52841F447EC8330C6429A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Sarahs Cookbook-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4BCFC803551BCE5944019A65 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Sarahs Cookbook/Pods-Sarahs Cookbook-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Sarahs Cookbook/Pods-Sarahs Cookbook-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Sarahs Cookbook/Pods-Sarahs Cookbook-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		ABE0979E249F6493002AED98 /* Sources */ = {
@@ -322,6 +391,7 @@
 		};
 		ABE097B7249F6495002AED98 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4FAB3882AFF3E1C64B8A5BAD /* Pods-Sarahs Cookbook.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -340,6 +410,7 @@
 		};
 		ABE097B8249F6495002AED98 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D61DF8456E0BC8BB3F574C1 /* Pods-Sarahs Cookbook.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
