@@ -7,11 +7,30 @@
 //
 
 import UIKit
+import Firebase
 
 class LogInController: UIViewController {
+    
+    @IBOutlet weak var emailTextfield: UITextField!
+    @IBOutlet weak var passwordTextfield: UITextField!
+    @IBOutlet weak var errorLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        errorLabel.text = ""
+    }
+    
+    @IBAction func loginPressed(_ sender: UIButton) {
+        if let email = emailTextfield.text, let password = passwordTextfield.text {
+            Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
+                if let err = error {
+                    // Search FIRAuthErrors and make switch statement for different error codes
+                    self.errorLabel.text = err.localizedDescription
+                } else {
+                    self.performSegue(withIdentifier: K.Routes.homeFromLogin, sender: self)
+                }
+            }
+        }
     }
 }

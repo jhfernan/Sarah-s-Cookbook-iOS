@@ -8,4 +8,11 @@
 
 struct K {
     static let appName = "Sarah's Cookbook"
+    
+    struct Routes {
+        static let homeFromRegister = "RegisterToHome"
+        static let homeFromLogin = "LogInToHome"
+        static let recipesFromAdd = "AddToRecipes"
+        static let recipesFromDetail = "DetailToRecipes"
+    }
 }

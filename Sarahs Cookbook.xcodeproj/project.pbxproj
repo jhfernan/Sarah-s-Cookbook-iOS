@@ -8,7 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		8FFA6A2F90D446BB4A525D8F /* Pods_Sarahs_Cookbook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27359B32F88DF269ECB56CA6 /* Pods_Sarahs_Cookbook.framework */; };
+		AB571C7F24A2FA1200F38B28 /* RecipesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB571C7E24A2FA1200F38B28 /* RecipesController.swift */; };
+		AB571C8124A2FD1900F38B28 /* AddRecipeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB571C8024A2FD1900F38B28 /* AddRecipeController.swift */; };
+		AB571C8324A2FD3D00F38B28 /* RecipeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB571C8224A2FD3D00F38B28 /* RecipeController.swift */; };
+		AB571C8624A3011000F38B28 /* RecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB571C8424A3011000F38B28 /* RecipeCell.swift */; };
+		AB571C8724A3011000F38B28 /* RecipeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB571C8524A3011000F38B28 /* RecipeCell.xib */; };
 		ABD35DFA24A109F10073135E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD35DF924A109F10073135E /* Constants.swift */; };
+		ABD35DFC24A1AF260073135E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ABD35DFB24A1AF250073135E /* GoogleService-Info.plist */; };
 		ABE097A6249F6493002AED98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE097A5249F6493002AED98 /* AppDelegate.swift */; };
 		ABE097A8249F6493002AED98 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE097A7249F6493002AED98 /* SceneDelegate.swift */; };
 		ABE097AA249F6493002AED98 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE097A9249F6493002AED98 /* MenuController.swift */; };
@@ -25,7 +31,13 @@
 		27359B32F88DF269ECB56CA6 /* Pods_Sarahs_Cookbook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sarahs_Cookbook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FAB3882AFF3E1C64B8A5BAD /* Pods-Sarahs Cookbook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sarahs Cookbook.debug.xcconfig"; path = "Target Support Files/Pods-Sarahs Cookbook/Pods-Sarahs Cookbook.debug.xcconfig"; sourceTree = "<group>"; };
 		8D61DF8456E0BC8BB3F574C1 /* Pods-Sarahs Cookbook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sarahs Cookbook.release.xcconfig"; path = "Target Support Files/Pods-Sarahs Cookbook/Pods-Sarahs Cookbook.release.xcconfig"; sourceTree = "<group>"; };
+		AB571C7E24A2FA1200F38B28 /* RecipesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesController.swift; sourceTree = "<group>"; };
+		AB571C8024A2FD1900F38B28 /* AddRecipeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecipeController.swift; sourceTree = "<group>"; };
+		AB571C8224A2FD3D00F38B28 /* RecipeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeController.swift; sourceTree = "<group>"; };
+		AB571C8424A3011000F38B28 /* RecipeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCell.swift; sourceTree = "<group>"; };
+		AB571C8524A3011000F38B28 /* RecipeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeCell.xib; sourceTree = "<group>"; };
 		ABD35DF924A109F10073135E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		ABD35DFB24A1AF250073135E /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		ABE097A2249F6493002AED98 /* Sarahs Cookbook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sarahs Cookbook.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABE097A5249F6493002AED98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABE097A7249F6493002AED98 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,9 +108,10 @@
 				ABE097BC249F6B30002AED98 /* View */,
 				ABE097BB249F6B24002AED98 /* Controller */,
 				ABE097AE249F6495002AED98 /* Assets.xcassets */,
-				ABE097B0249F6495002AED98 /* LaunchScreen.storyboard */,
-				ABE097B3249F6495002AED98 /* Info.plist */,
 				ABD35DF924A109F10073135E /* Constants.swift */,
+				ABE097B3249F6495002AED98 /* Info.plist */,
+				ABD35DFB24A1AF250073135E /* GoogleService-Info.plist */,
+				ABE097B0249F6495002AED98 /* LaunchScreen.storyboard */,
 			);
 			path = "Sarahs Cookbook";
 			sourceTree = "<group>";
@@ -110,6 +123,9 @@
 				ABE9449124A0516000D52D14 /* RegisterController.swift */,
 				ABE9449324A051BD00D52D14 /* LogInController.swift */,
 				ABE9449524A051E200D52D14 /* HomeController.swift */,
+				AB571C7E24A2FA1200F38B28 /* RecipesController.swift */,
+				AB571C8024A2FD1900F38B28 /* AddRecipeController.swift */,
+				AB571C8224A2FD3D00F38B28 /* RecipeController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -118,6 +134,8 @@
 			isa = PBXGroup;
 			children = (
 				ABE097AB249F6493002AED98 /* Main.storyboard */,
+				AB571C8424A3011000F38B28 /* RecipeCell.swift */,
+				AB571C8524A3011000F38B28 /* RecipeCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -191,6 +209,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABE097B2249F6495002AED98 /* LaunchScreen.storyboard in Resources */,
+				ABD35DFC24A1AF260073135E /* GoogleService-Info.plist in Resources */,
+				AB571C8724A3011000F38B28 /* RecipeCell.xib in Resources */,
 				ABE097AF249F6495002AED98 /* Assets.xcassets in Resources */,
 				ABE097AD249F6493002AED98 /* Main.storyboard in Resources */,
 			);
@@ -248,11 +268,15 @@
 				ABE9449224A0516000D52D14 /* RegisterController.swift in Sources */,
 				ABE9449424A051BD00D52D14 /* LogInController.swift in Sources */,
 				ABE9449624A051E200D52D14 /* HomeController.swift in Sources */,
+				AB571C8624A3011000F38B28 /* RecipeCell.swift in Sources */,
 				ABE097AA249F6493002AED98 /* MenuController.swift in Sources */,
 				ABE097BE249F9B6D002AED98 /* RecipeData.swift in Sources */,
 				ABE097A6249F6493002AED98 /* AppDelegate.swift in Sources */,
 				ABE097A8249F6493002AED98 /* SceneDelegate.swift in Sources */,
+				AB571C8124A2FD1900F38B28 /* AddRecipeController.swift in Sources */,
 				ABD35DFA24A109F10073135E /* Constants.swift in Sources */,
+				AB571C8324A2FD3D00F38B28 /* RecipeController.swift in Sources */,
+				AB571C7F24A2FA1200F38B28 /* RecipesController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

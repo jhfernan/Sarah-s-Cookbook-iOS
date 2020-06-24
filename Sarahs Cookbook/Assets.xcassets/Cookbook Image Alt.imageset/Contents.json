@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Main Menu.png",
+      "filename" : "Cookbook Image Alt.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Main Menu@2x.png",
+      "filename" : "Cookbook Image Alt@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Main Menu@3x.png",
+      "filename" : "Cookbook Image Alt@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
