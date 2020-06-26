@@ -13,6 +13,7 @@
 		AB571C8324A2FD3D00F38B28 /* RecipeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB571C8224A2FD3D00F38B28 /* RecipeController.swift */; };
 		AB571C8624A3011000F38B28 /* RecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB571C8424A3011000F38B28 /* RecipeCell.swift */; };
 		AB571C8724A3011000F38B28 /* RecipeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB571C8524A3011000F38B28 /* RecipeCell.xib */; };
+		AB64FD5F24A5B14300A75CAB /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB64FD5E24A5B14300A75CAB /* Recipe.swift */; };
 		ABD35DFA24A109F10073135E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD35DF924A109F10073135E /* Constants.swift */; };
 		ABD35DFC24A1AF260073135E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ABD35DFB24A1AF250073135E /* GoogleService-Info.plist */; };
 		ABE097A6249F6493002AED98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE097A5249F6493002AED98 /* AppDelegate.swift */; };
@@ -36,6 +37,7 @@
 		AB571C8224A2FD3D00F38B28 /* RecipeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeController.swift; sourceTree = "<group>"; };
 		AB571C8424A3011000F38B28 /* RecipeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCell.swift; sourceTree = "<group>"; };
 		AB571C8524A3011000F38B28 /* RecipeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeCell.xib; sourceTree = "<group>"; };
+		AB64FD5E24A5B14300A75CAB /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		ABD35DF924A109F10073135E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		ABD35DFB24A1AF250073135E /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		ABE097A2249F6493002AED98 /* Sarahs Cookbook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sarahs Cookbook.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -144,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				ABE097BD249F9B6D002AED98 /* RecipeData.swift */,
+				AB64FD5E24A5B14300A75CAB /* Recipe.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 				ABE097A8249F6493002AED98 /* SceneDelegate.swift in Sources */,
 				AB571C8124A2FD1900F38B28 /* AddRecipeController.swift in Sources */,
 				ABD35DFA24A109F10073135E /* Constants.swift in Sources */,
+				AB64FD5F24A5B14300A75CAB /* Recipe.swift in Sources */,
 				AB571C8324A2FD3D00F38B28 /* RecipeController.swift in Sources */,
 				AB571C7F24A2FA1200F38B28 /* RecipesController.swift in Sources */,
 			);
