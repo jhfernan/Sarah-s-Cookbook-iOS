@@ -11,7 +11,11 @@ import Firebase
 
 class ProfileController: UIViewController {
     
+    let user = Auth.auth().currentUser
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        title = UserHelpers.getTitle(from: user)
     }
 }

@@ -13,7 +13,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MenuController" customModule="Sarahs_Cookbook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="56" translatesAutoresizingMaskIntoConstraints="NO" id="0pO-YY-lUK">
@@ -118,7 +118,7 @@
             <objects>
                 <viewController id="tuH-qw-s0z" customClass="LogInController" customModule="Sarahs_Cookbook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tgm-g0-HI4">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uco-Tl-U9p">
@@ -232,7 +232,7 @@
             <objects>
                 <viewController id="PQC-j0-2U7" customClass="HomeController" customModule="Sarahs_Cookbook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Zro-se-6S1">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MainBG" translatesAutoresizingMaskIntoConstraints="NO" id="40h-5x-X18">
@@ -273,7 +273,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ppX-ph-enV">
                                 <rect key="frame" x="20" y="329" width="70" height="70"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cookbook Image" translatesAutoresizingMaskIntoConstraints="NO" id="Zvl-wE-dii">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Hat" translatesAutoresizingMaskIntoConstraints="NO" id="Zvl-wE-dii">
                                         <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r7I-LH-kxR">
@@ -349,7 +349,7 @@
             <objects>
                 <viewController id="9yb-zN-2YI" customClass="RecipesController" customModule="Sarahs_Cookbook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aln-pt-m1b">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DFf-os-xWV">
@@ -388,7 +388,7 @@
             <objects>
                 <viewController id="Ii9-x2-0IW" customClass="RecipeController" customModule="Sarahs_Cookbook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mCx-nw-3Sq">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lFa-f4-HSd">
@@ -560,23 +560,139 @@
             <objects>
                 <viewController id="l5P-Bd-P8m" customClass="ProfileController" customModule="Sarahs_Cookbook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="I3S-FP-hBQ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6zv-rn-JMf">
+                                <rect key="frame" x="20" y="20" width="374" height="168"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lPF-6O-7IM">
+                                        <rect key="frame" x="0.0" y="30" width="374" height="70"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Input" translatesAutoresizingMaskIntoConstraints="NO" id="OWe-cz-O1t">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="70"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="70" id="qlu-iD-eHN"/>
+                                                </constraints>
+                                            </imageView>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Your Email..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gkm-L2-SRd">
+                                                <rect key="frame" x="8" y="18" width="358" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="Gkm-L2-SRd" secondAttribute="trailing" constant="8" id="3n7-au-Wud"/>
+                                            <constraint firstItem="OWe-cz-O1t" firstAttribute="top" secondItem="lPF-6O-7IM" secondAttribute="top" id="AdS-MY-drx"/>
+                                            <constraint firstAttribute="bottom" secondItem="Gkm-L2-SRd" secondAttribute="bottom" constant="18" id="AgA-Vw-eik"/>
+                                            <constraint firstItem="OWe-cz-O1t" firstAttribute="leading" secondItem="lPF-6O-7IM" secondAttribute="leading" id="MQL-tO-pk8"/>
+                                            <constraint firstAttribute="height" constant="70" id="MtS-f4-Upo"/>
+                                            <constraint firstAttribute="trailing" secondItem="OWe-cz-O1t" secondAttribute="trailing" id="U5G-XV-Jcm"/>
+                                            <constraint firstAttribute="bottom" secondItem="OWe-cz-O1t" secondAttribute="bottom" id="Wpq-oq-tHA"/>
+                                            <constraint firstItem="Gkm-L2-SRd" firstAttribute="top" secondItem="lPF-6O-7IM" secondAttribute="top" constant="18" id="l2P-bP-7f7"/>
+                                            <constraint firstItem="Gkm-L2-SRd" firstAttribute="leading" secondItem="lPF-6O-7IM" secondAttribute="leading" constant="8" id="ukN-9z-QTU"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EIm-3h-5LC">
+                                        <rect key="frame" x="0.0" y="108" width="374" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="6tL-uh-NJj"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                        <state key="normal" title="Update Email">
+                                            <color key="titleColor" name="SecondaryColorAccent"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="EIm-3h-5LC" firstAttribute="leading" secondItem="6zv-rn-JMf" secondAttribute="leading" id="9vD-3Z-fvD"/>
+                                    <constraint firstAttribute="height" constant="168" id="BQV-4D-c4N"/>
+                                    <constraint firstAttribute="trailing" secondItem="lPF-6O-7IM" secondAttribute="trailing" id="Vrt-Ph-gqc"/>
+                                    <constraint firstAttribute="trailing" secondItem="EIm-3h-5LC" secondAttribute="trailing" id="YiI-7S-Mlq"/>
+                                    <constraint firstItem="lPF-6O-7IM" firstAttribute="leading" secondItem="6zv-rn-JMf" secondAttribute="leading" id="dSQ-tr-TlU"/>
+                                    <constraint firstItem="EIm-3h-5LC" firstAttribute="top" secondItem="lPF-6O-7IM" secondAttribute="bottom" constant="8" id="qx0-nr-t7W"/>
+                                    <constraint firstAttribute="bottom" secondItem="EIm-3h-5LC" secondAttribute="bottom" id="wah-Ya-55O"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lqh-rX-JIu">
+                                <rect key="frame" x="20" y="196" width="374" height="168"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1SV-Dr-C3x">
+                                        <rect key="frame" x="0.0" y="30" width="374" height="70"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Input" translatesAutoresizingMaskIntoConstraints="NO" id="uGt-4W-j0b">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="70"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="70" id="VNP-mW-wqO"/>
+                                                </constraints>
+                                            </imageView>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Your Display Name..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DeQ-yn-lll">
+                                                <rect key="frame" x="8" y="18" width="358" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="DeQ-yn-lll" firstAttribute="top" secondItem="1SV-Dr-C3x" secondAttribute="top" constant="18" id="FBy-2Q-1zn"/>
+                                            <constraint firstAttribute="bottom" secondItem="DeQ-yn-lll" secondAttribute="bottom" constant="18" id="IRA-XQ-oJk"/>
+                                            <constraint firstAttribute="height" constant="70" id="Swt-fg-EMN"/>
+                                            <constraint firstItem="uGt-4W-j0b" firstAttribute="leading" secondItem="1SV-Dr-C3x" secondAttribute="leading" id="bNu-Kr-QD0"/>
+                                            <constraint firstAttribute="trailing" secondItem="uGt-4W-j0b" secondAttribute="trailing" id="jLs-GR-ubu"/>
+                                            <constraint firstAttribute="trailing" secondItem="DeQ-yn-lll" secondAttribute="trailing" constant="8" id="kgu-Pj-CRs"/>
+                                            <constraint firstAttribute="bottom" secondItem="uGt-4W-j0b" secondAttribute="bottom" id="lxY-lY-OxO"/>
+                                            <constraint firstItem="DeQ-yn-lll" firstAttribute="leading" secondItem="1SV-Dr-C3x" secondAttribute="leading" constant="8" id="lyj-EF-WNW"/>
+                                            <constraint firstItem="uGt-4W-j0b" firstAttribute="top" secondItem="1SV-Dr-C3x" secondAttribute="top" id="wzQ-LL-0Nv"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gdf-FI-fRy">
+                                        <rect key="frame" x="0.0" y="108" width="374" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="yg0-0g-MbR"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                        <state key="normal" title="Update Display Name">
+                                            <color key="titleColor" name="SecondaryColorAccent"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Gdf-FI-fRy" secondAttribute="bottom" id="JS0-gO-zUi"/>
+                                    <constraint firstAttribute="trailing" secondItem="1SV-Dr-C3x" secondAttribute="trailing" id="PYo-J5-hwQ"/>
+                                    <constraint firstItem="1SV-Dr-C3x" firstAttribute="leading" secondItem="Lqh-rX-JIu" secondAttribute="leading" id="Y15-pu-vhe"/>
+                                    <constraint firstItem="Gdf-FI-fRy" firstAttribute="top" secondItem="1SV-Dr-C3x" secondAttribute="bottom" constant="8" id="iqZ-jA-LGm"/>
+                                    <constraint firstAttribute="trailing" secondItem="Gdf-FI-fRy" secondAttribute="trailing" id="m0O-IX-OUO"/>
+                                    <constraint firstAttribute="height" constant="168" id="mmE-75-NRh"/>
+                                    <constraint firstItem="Gdf-FI-fRy" firstAttribute="leading" secondItem="Lqh-rX-JIu" secondAttribute="leading" id="uFg-p1-Zso"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6zv-rn-JMf" firstAttribute="leading" secondItem="bzS-Xn-y3Q" secondAttribute="leading" constant="20" id="84t-hu-qrg"/>
+                            <constraint firstItem="6zv-rn-JMf" firstAttribute="top" secondItem="bzS-Xn-y3Q" secondAttribute="top" constant="20" id="WVZ-hb-bWa"/>
+                            <constraint firstItem="Lqh-rX-JIu" firstAttribute="top" secondItem="6zv-rn-JMf" secondAttribute="bottom" constant="8" id="XPB-CH-tPZ"/>
+                            <constraint firstItem="bzS-Xn-y3Q" firstAttribute="trailing" secondItem="6zv-rn-JMf" secondAttribute="trailing" constant="20" id="kIG-fG-gMb"/>
+                            <constraint firstItem="bzS-Xn-y3Q" firstAttribute="trailing" secondItem="Lqh-rX-JIu" secondAttribute="trailing" constant="20" id="kVL-Vs-xPQ"/>
+                            <constraint firstItem="Lqh-rX-JIu" firstAttribute="leading" secondItem="bzS-Xn-y3Q" secondAttribute="leading" constant="20" id="tHT-2k-aUc"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="bzS-Xn-y3Q"/>
                     </view>
                     <navigationItem key="navigationItem" id="5XA-E2-sYn"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zi1-Og-U6h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4362" y="-654"/>
+            <point key="canvasLocation" x="4360.8695652173919" y="-654.24107142857144"/>
         </scene>
         <!--Add Recipe Controller-->
         <scene sceneID="3wd-Ca-zxd">
             <objects>
                 <viewController id="18y-ms-1FW" customClass="AddRecipeController" customModule="Sarahs_Cookbook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bg9-VS-aie">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recipe Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AyL-dg-RIF">
@@ -738,7 +854,7 @@
             <objects>
                 <viewController id="8G4-FF-yhS" customClass="RegisterController" customModule="Sarahs_Cookbook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qbe-RJ-xIQ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eLw-dD-jJ3">
@@ -863,11 +979,12 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="st8-pg-hj9"/>
+        <segue reference="ucf-pp-2AF"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Cookbook Image" width="72.5" height="67"/>
         <image name="Cookbook Image Alt" width="72.5" height="67"/>
+        <image name="Hat" width="99" height="100.5"/>
         <image name="Input" width="136" height="26"/>
         <image name="MainBG" width="138" height="298.5"/>
         <image name="plus" catalog="system" width="128" height="113"/>
