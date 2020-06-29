@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8FFA6A2F90D446BB4A525D8F /* Pods_Sarahs_Cookbook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27359B32F88DF269ECB56CA6 /* Pods_Sarahs_Cookbook.framework */; };
+		AB44ADA124A9D4AD00A327BB /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB44ADA024A9D4AD00A327BB /* ProfileController.swift */; };
 		AB571C7F24A2FA1200F38B28 /* RecipesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB571C7E24A2FA1200F38B28 /* RecipesController.swift */; };
 		AB571C8124A2FD1900F38B28 /* AddRecipeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB571C8024A2FD1900F38B28 /* AddRecipeController.swift */; };
 		AB571C8324A2FD3D00F38B28 /* RecipeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB571C8224A2FD3D00F38B28 /* RecipeController.swift */; };
@@ -22,7 +23,7 @@
 		ABE097AD249F6493002AED98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABE097AB249F6493002AED98 /* Main.storyboard */; };
 		ABE097AF249F6495002AED98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABE097AE249F6495002AED98 /* Assets.xcassets */; };
 		ABE097B2249F6495002AED98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABE097B0249F6495002AED98 /* LaunchScreen.storyboard */; };
-		ABE097BE249F9B6D002AED98 /* RecipeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE097BD249F9B6D002AED98 /* RecipeData.swift */; };
+		ABE097BE249F9B6D002AED98 /* RecipeHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE097BD249F9B6D002AED98 /* RecipeHelpers.swift */; };
 		ABE9449224A0516000D52D14 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE9449124A0516000D52D14 /* RegisterController.swift */; };
 		ABE9449424A051BD00D52D14 /* LogInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE9449324A051BD00D52D14 /* LogInController.swift */; };
 		ABE9449624A051E200D52D14 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE9449524A051E200D52D14 /* HomeController.swift */; };
@@ -32,6 +33,7 @@
 		27359B32F88DF269ECB56CA6 /* Pods_Sarahs_Cookbook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sarahs_Cookbook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FAB3882AFF3E1C64B8A5BAD /* Pods-Sarahs Cookbook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sarahs Cookbook.debug.xcconfig"; path = "Target Support Files/Pods-Sarahs Cookbook/Pods-Sarahs Cookbook.debug.xcconfig"; sourceTree = "<group>"; };
 		8D61DF8456E0BC8BB3F574C1 /* Pods-Sarahs Cookbook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sarahs Cookbook.release.xcconfig"; path = "Target Support Files/Pods-Sarahs Cookbook/Pods-Sarahs Cookbook.release.xcconfig"; sourceTree = "<group>"; };
+		AB44ADA024A9D4AD00A327BB /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		AB571C7E24A2FA1200F38B28 /* RecipesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesController.swift; sourceTree = "<group>"; };
 		AB571C8024A2FD1900F38B28 /* AddRecipeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecipeController.swift; sourceTree = "<group>"; };
 		AB571C8224A2FD3D00F38B28 /* RecipeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeController.swift; sourceTree = "<group>"; };
@@ -48,7 +50,7 @@
 		ABE097AE249F6495002AED98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ABE097B1249F6495002AED98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ABE097B3249F6495002AED98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ABE097BD249F9B6D002AED98 /* RecipeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeData.swift; sourceTree = "<group>"; };
+		ABE097BD249F9B6D002AED98 /* RecipeHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeHelpers.swift; sourceTree = "<group>"; };
 		ABE9449124A0516000D52D14 /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
 		ABE9449324A051BD00D52D14 /* LogInController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInController.swift; sourceTree = "<group>"; };
 		ABE9449524A051E200D52D14 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				AB571C7E24A2FA1200F38B28 /* RecipesController.swift */,
 				AB571C8024A2FD1900F38B28 /* AddRecipeController.swift */,
 				AB571C8224A2FD3D00F38B28 /* RecipeController.swift */,
+				AB44ADA024A9D4AD00A327BB /* ProfileController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -145,7 +148,7 @@
 		ABE097BF249F9BA8002AED98 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				ABE097BD249F9B6D002AED98 /* RecipeData.swift */,
+				ABE097BD249F9B6D002AED98 /* RecipeHelpers.swift */,
 				AB64FD5E24A5B14300A75CAB /* Recipe.swift */,
 			);
 			path = Model;
@@ -273,8 +276,9 @@
 				ABE9449624A051E200D52D14 /* HomeController.swift in Sources */,
 				AB571C8624A3011000F38B28 /* RecipeCell.swift in Sources */,
 				ABE097AA249F6493002AED98 /* MenuController.swift in Sources */,
-				ABE097BE249F9B6D002AED98 /* RecipeData.swift in Sources */,
+				ABE097BE249F9B6D002AED98 /* RecipeHelpers.swift in Sources */,
 				ABE097A6249F6493002AED98 /* AppDelegate.swift in Sources */,
+				AB44ADA124A9D4AD00A327BB /* ProfileController.swift in Sources */,
 				ABE097A8249F6493002AED98 /* SceneDelegate.swift in Sources */,
 				AB571C8124A2FD1900F38B28 /* AddRecipeController.swift in Sources */,
 				ABD35DFA24A109F10073135E /* Constants.swift in Sources */,

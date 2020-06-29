@@ -11,6 +11,10 @@ struct K {
     static let cellIdentifier = "ReusableCell"
     static let cellNibName = "RecipeCell"
     
+    struct FirebaseStorage {
+        static let uploadUrlBase = "gs://sarah-s-cookbook.appspot.com/"
+    }
+    
     struct Routes {
         static let homeFromRegister = "RegisterToHome"
         static let homeFromLogin = "LogInToHome"
@@ -23,9 +27,11 @@ struct K {
         struct Recipe {
             static let collectionName = "recipes"
             static let name = "name"
+            static let author = "user_uid"
             static let ingredients = "ingredients"
             static let directions = "directions"
             static let createdOn = "createdAt"
+            static let imagePath = "path"
         }
     }
 }

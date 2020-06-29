@@ -17,27 +17,61 @@ class AddRecipeController: UIViewController {
     @IBOutlet weak var recipeImage: UIImageView!
     
     let db = Firestore.firestore()
+    let storage = Storage.storage()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        recipeImage.image = #imageLiteral(resourceName: "Cookbook Image Alt")
     }
-     
+    
     @IBAction func addRecipePressed(_ sender: UIButton) {
+        
         if let name = recipeName.text,
             let ingredients = ingredientsTextview.text,
-            let directions = directionsTextview.text {
-            db.collection(K.Models.Recipe.collectionName).addDocument(data: [
+            let directions = directionsTextview.text,
+            let userId = Auth.auth().currentUser?.uid {
+            var data: [String: Any] = [
                 K.Models.Recipe.name: name,
+                K.Models.Recipe.author: userId,
                 K.Models.Recipe.ingredients: ingredients,
                 K.Models.Recipe.directions: directions,
                 K.Models.Recipe.createdOn: Date().timeIntervalSince1970
-            ]) { (error) in
-                if let err = error {
-                    print("Issue encountered trying to push data to database: \(err)")
-                } else {
-                    DispatchQueue.main.async {
-                        self.navigationController?.popViewController(animated: true)
+            ]
+            if recipeImage.image == #imageLiteral(resourceName: "Cookbook Image Alt") {
+                print("Picture was not changed")
+                createRecipe(with: data)
+            } else {
+                let storageRef = storage.reference()
+                let imageRef = storageRef.child("recipes/\(userId)/\(name)")
+                let imageToUpload = RecipeHelpers.resizeImage(image: recipeImage.image!, newWidth: CGFloat(200))
+                if let dataImage = imageToUpload!.pngData() {
+                    imageRef.putData(dataImage, metadata: nil) { (metadata, error) in
+                        if error != nil {
+                            print(error!)
+                            return
+                        }
+                        
+                        imageRef.downloadURL { (url, err) in
+                            guard let downloadedURL = url else {
+                                print(err!)
+                                return
+                            }
+                            data[K.Models.Recipe.imagePath] = downloadedURL.absoluteString
+                            self.createRecipe(with: data)
+                        }
                     }
+                }
+            }
+        }
+    }
+    
+    func createRecipe(with data: [String: Any]) {
+        db.collection(K.Models.Recipe.collectionName).addDocument(data: data) { (error) in
+            if let err = error {
+                print("Issue encountered trying to push data to database: \(err)")
+            } else {
+                DispatchQueue.main.async {
+                    self.navigationController?.popViewController(animated: true)
                 }
             }
         }

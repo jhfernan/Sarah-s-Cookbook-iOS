@@ -10,7 +10,7 @@ import UIKit
 
 struct RecipeHelpers {
     
-    func resizeImage(image: UIImage, newWidth: CGFloat) -> UIImage? {
+    static func resizeImage(image: UIImage, newWidth: CGFloat) -> UIImage? {
 
         let scale = newWidth / image.size.width
         let newHeight = image.size.height * scale
