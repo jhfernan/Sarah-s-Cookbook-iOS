@@ -17,8 +17,11 @@ class RecipeController: UIViewController {
     @IBOutlet weak var ingredientsLabel: UILabel!
     @IBOutlet weak var directionsLabel: UILabel!
     
+    let db = Firestore.firestore()
+    
     var recipeName: String = "name"
-    var recipeAuthor: String = "By: Anonymous"
+    var recipeAuthorUID: String = ""
+    var recipeAuthor: String = "By: "
     var recipeImage: UIImage = #imageLiteral(resourceName: "Cookbook Image Alt")
     var recipeIngredients: String = "get this stuff"
     var recipeDirections: String = "do this stuff"
@@ -31,6 +34,22 @@ class RecipeController: UIViewController {
         authorLabel.text = recipeAuthor
         ingredientsLabel.text = recipeIngredients
         directionsLabel.text = recipeDirections
+        
+        if recipeAuthorUID != "" {
+            db.collection(K.Models.Users.collectionName)
+                .document(recipeAuthorUID)
+                .getDocument { (document, error) in
+                    if let document = document {
+                        if let displayName = document[K.Models.Users.name] as? String {
+                            self.authorLabel.text! += displayName
+                        }
+                        
+                    } else {
+                        print("No User info found with that id")
+                        self.authorLabel.text! += "Anonymous"
+                    }
+            }
+        }
     }
     
     

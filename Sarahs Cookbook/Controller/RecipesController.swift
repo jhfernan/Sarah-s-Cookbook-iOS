@@ -122,23 +122,8 @@ extension RecipesController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == K.Routes.detailFromRecipes {
             let destinationVC = segue.destination as! RecipeController
-            print(recipe!.user_uid)
-            
-            db.collection(K.Models.Users.collectionName)
-                .document(recipe!.user_uid)
-                .getDocument { (document, error) in
-                    if let document = document {
-                        let data = document.data()
-                        if let displayName = data[K.Models.Users.name] {
-                            destinationVC.recipeAuthor = "By: \(displayName)"
-                        }
-                        
-                    } else {
-                        print("No User info found with that id")
-                    }
-            }
-            
             destinationVC.recipeName = recipe!.name
+            destinationVC.recipeAuthorUID = recipe!.user_uid
             destinationVC.recipeIngredients = recipe!.ingredients
             destinationVC.recipeDirections = recipe!.directions
             if let image = recipe?.image {
