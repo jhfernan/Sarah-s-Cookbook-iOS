@@ -42,17 +42,21 @@ class RecipesController: UIViewController {
                     for doc in snapshotDocuments {
                         let data = doc.data()
                         if let name = data[K.Models.Recipe.name] as? String,
+                            let author = data[K.Models.Recipe.author] as? String,
+                            let time = data[K.Models.Recipe.time] as? String,
                             let ingredients = data[K.Models.Recipe.ingredients] as? String,
                             let directions = data[K.Models.Recipe.directions] as? String,
                             let createdAt = data[K.Models.Recipe.createdOn] as? Double {
                             var info: [String: Any] = [
-                                "name": name,
-                                "ingredients": ingredients,
-                                "directions": directions,
-                                "createdAt": createdAt
+                                K.Models.Recipe.name: name,
+                                K.Models.Recipe.author: author,
+                                K.Models.Recipe.time: time,
+                                K.Models.Recipe.ingredients: ingredients,
+                                K.Models.Recipe.directions: directions,
+                                K.Models.Recipe.createdOn: createdAt
                             ]
                             if let path = data[K.Models.Recipe.imagePath] as? String {
-                                info["path"] = path
+                                info[K.Models.Recipe.imagePath] = path
                                 
                                 let recipeRef = self.storage.reference(forURL: path)
                                 
@@ -118,6 +122,22 @@ extension RecipesController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == K.Routes.detailFromRecipes {
             let destinationVC = segue.destination as! RecipeController
+            print(recipe!.user_uid)
+            
+            db.collection(K.Models.Users.collectionName)
+                .document(recipe!.user_uid)
+                .getDocument { (document, error) in
+                    if let document = document {
+                        let data = document.data()
+                        if let displayName = data[K.Models.Users.name] {
+                            destinationVC.recipeAuthor = "By: \(displayName)"
+                        }
+                        
+                    } else {
+                        print("No User info found with that id")
+                    }
+            }
+            
             destinationVC.recipeName = recipe!.name
             destinationVC.recipeIngredients = recipe!.ingredients
             destinationVC.recipeDirections = recipe!.directions

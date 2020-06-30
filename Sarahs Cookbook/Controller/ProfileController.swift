@@ -23,41 +23,18 @@ class ProfileController: UIViewController {
         super.viewDidLoad()
         
         errorLabel.text = ""
-        setTitle()
     }
     
     @IBAction func updateProfilePressed(_ sender: UIButton) {
-        loadingIndicator.isHidden = false
-        if emailTextfield.text != "" {
-            let email = emailTextfield.text
-            user?.updateEmail(to: email!) { (error) in
-                if let err = error {
-                    self.errorLabel.text = err.localizedDescription
-                }
-                self.setTitle()
-                UserHelpers.updateUserData(for: self.user?.uid, with: ["email": email!])
-                
-                self.emailTextfield.text = ""
+        loadingIndicator.startAnimating()
+        UserHelpers.updateProfile(email: emailTextfield.text!, displayName: displayNameTextfield.text!) { (res) in
+            if let err = res!.err {
+                self.errorLabel.text = err
+                self.loadingIndicator.stopAnimating()
+            } else {
+                self.title = res?.title
+                self.loadingIndicator.stopAnimating()
             }
         }
-        
-        if displayNameTextfield.text != "" {
-            let displayName = displayNameTextfield.text
-            let updateRequest = user?.createProfileChangeRequest()
-            updateRequest?.displayName = displayName
-            updateRequest?.commitChanges { (error) in
-                if let err = error {
-                    self.errorLabel.text = err.localizedDescription
-                }
-                self.setTitle()
-                UserHelpers.updateUserData(for: self.user?.uid, with: ["displayName": displayName!])
-                
-                self.displayNameTextfield.text = ""
-            }
-        }
-    }
-    
-    func setTitle() {
-        title = UserHelpers.getTitle(from: user)
     }
 }

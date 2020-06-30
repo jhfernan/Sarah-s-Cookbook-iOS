@@ -10,6 +10,8 @@ import UIKit
 
 struct Recipe {
     let name: String
+    let user_uid: String
+    let cookTime: String
     var image: UIImage? = nil
     let ingredients: String
     let directions: String
@@ -18,6 +20,8 @@ struct Recipe {
     
     init(info: [String: Any]) {
         self.name = info["name"] as! String
+        self.user_uid = info["user_uid"] as! String
+        self.cookTime = info["cookTime"] as! String
         self.ingredients = info["ingredients"] as! String
         self.directions = info["directions"] as! String
         self.createdAt = info["createdAt"] as! Double

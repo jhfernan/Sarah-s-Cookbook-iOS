@@ -16,27 +16,21 @@
                 <rect key="frame" x="0.0" y="0.0" width="441" height="100"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="Hks-A2-Bx2">
+                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="Hks-A2-Bx2">
                         <rect key="frame" x="10" y="10" width="421" height="80"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tO4-en-Ye6">
                                 <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cookbook Image" translatesAutoresizingMaskIntoConstraints="NO" id="zNf-Hi-25c">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Cookbook Image" translatesAutoresizingMaskIntoConstraints="NO" id="zNf-Hi-25c">
                                         <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="80" id="EcW-jO-vXv"/>
-                                        </constraints>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="zNf-Hi-25c" secondAttribute="bottom" id="6nz-Q4-6K8"/>
-                                    <constraint firstItem="zNf-Hi-25c" firstAttribute="leading" secondItem="tO4-en-Ye6" secondAttribute="leading" id="L59-Wr-cKg"/>
-                                    <constraint firstAttribute="height" constant="80" id="cZq-JA-lZM"/>
-                                    <constraint firstItem="zNf-Hi-25c" firstAttribute="top" secondItem="tO4-en-Ye6" secondAttribute="top" id="i9D-bx-Xcl"/>
-                                    <constraint firstAttribute="width" constant="80" id="nsN-5Q-Gke"/>
-                                    <constraint firstAttribute="trailing" secondItem="zNf-Hi-25c" secondAttribute="trailing" id="zIy-n4-vLp"/>
+                                    <constraint firstAttribute="width" constant="80" id="DDc-yY-3qj"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="ffb-yu-SxV"/>
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Nd6-BZ-iev">
@@ -77,13 +71,17 @@
                                                 <color key="tintColor" red="0.93725490199999995" green="0.72549019609999998" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </imageView>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                     </view>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <constraints>
-                            <constraint firstAttribute="height" constant="80" id="ops-cG-EZO"/>
+                            <constraint firstItem="Nd6-BZ-iev" firstAttribute="leading" secondItem="tO4-en-Ye6" secondAttribute="trailing" constant="25" id="18y-zD-nos"/>
+                            <constraint firstItem="Nd6-BZ-iev" firstAttribute="leading" secondItem="tO4-en-Ye6" secondAttribute="trailing" constant="25" id="AeV-dn-ANm"/>
+                            <constraint firstItem="tO4-en-Ye6" firstAttribute="top" secondItem="Hks-A2-Bx2" secondAttribute="top" id="EDG-nm-9Sa"/>
+                            <constraint firstItem="tO4-en-Ye6" firstAttribute="leading" secondItem="Hks-A2-Bx2" secondAttribute="leading" id="GFq-KZ-qGO"/>
+                            <constraint firstAttribute="trailing" secondItem="Nd6-BZ-iev" secondAttribute="trailing" id="Gik-JC-qA4"/>
+                            <constraint firstItem="Nd6-BZ-iev" firstAttribute="top" secondItem="Hks-A2-Bx2" secondAttribute="top" id="fI4-Ys-ecA"/>
                         </constraints>
                     </stackView>
                 </subviews>

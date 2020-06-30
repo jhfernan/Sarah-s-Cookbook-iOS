@@ -28,10 +28,16 @@ struct K {
             static let collectionName = "recipes"
             static let name = "name"
             static let author = "user_uid"
+            static let time = "cookTime"
             static let ingredients = "ingredients"
             static let directions = "directions"
             static let createdOn = "createdAt"
             static let imagePath = "path"
+        }
+        
+        struct Users {
+            static let collectionName = "users"
+            static let name = "displayName"
         }
     }
 }

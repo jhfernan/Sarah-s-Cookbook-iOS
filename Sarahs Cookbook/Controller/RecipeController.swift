@@ -18,7 +18,7 @@ class RecipeController: UIViewController {
     @IBOutlet weak var directionsLabel: UILabel!
     
     var recipeName: String = "name"
-    var recipeAuthor: String = "By: "
+    var recipeAuthor: String = "By: Anonymous"
     var recipeImage: UIImage = #imageLiteral(resourceName: "Cookbook Image Alt")
     var recipeIngredients: String = "get this stuff"
     var recipeDirections: String = "do this stuff"
