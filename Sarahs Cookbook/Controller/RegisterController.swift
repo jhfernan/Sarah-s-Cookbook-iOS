@@ -28,6 +28,7 @@ class RegisterController: UIViewController {
                     self.errorLabel.text = err.localizedDescription
                 } else {
                     self.errorLabel.text = ""
+                    UserHelpers.setUserData(with: Auth.auth().currentUser)
                     self.performSegue(withIdentifier: K.Routes.homeFromRegister, sender: self)
                 }
             }

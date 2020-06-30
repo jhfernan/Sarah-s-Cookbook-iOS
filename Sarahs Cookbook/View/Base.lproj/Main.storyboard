@@ -564,7 +564,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6zv-rn-JMf">
-                                <rect key="frame" x="20" y="20" width="374" height="168"/>
+                                <rect key="frame" x="20" y="20" width="374" height="120"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lPF-6O-7IM">
                                         <rect key="frame" x="0.0" y="30" width="374" height="70"/>
@@ -594,30 +594,30 @@
                                             <constraint firstItem="Gkm-L2-SRd" firstAttribute="leading" secondItem="lPF-6O-7IM" secondAttribute="leading" constant="8" id="ukN-9z-QTU"/>
                                         </constraints>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EIm-3h-5LC">
-                                        <rect key="frame" x="0.0" y="108" width="374" height="60"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="60" id="6tL-uh-NJj"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
-                                        <state key="normal" title="Update Email">
-                                            <color key="titleColor" name="SecondaryColorAccent"/>
-                                        </state>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstItem="EIm-3h-5LC" firstAttribute="leading" secondItem="6zv-rn-JMf" secondAttribute="leading" id="9vD-3Z-fvD"/>
-                                    <constraint firstAttribute="height" constant="168" id="BQV-4D-c4N"/>
+                                    <constraint firstAttribute="height" constant="120" id="BQV-4D-c4N"/>
+                                    <constraint firstItem="lPF-6O-7IM" firstAttribute="top" secondItem="6zv-rn-JMf" secondAttribute="top" constant="30" id="BkX-Xl-wP4"/>
                                     <constraint firstAttribute="trailing" secondItem="lPF-6O-7IM" secondAttribute="trailing" id="Vrt-Ph-gqc"/>
-                                    <constraint firstAttribute="trailing" secondItem="EIm-3h-5LC" secondAttribute="trailing" id="YiI-7S-Mlq"/>
                                     <constraint firstItem="lPF-6O-7IM" firstAttribute="leading" secondItem="6zv-rn-JMf" secondAttribute="leading" id="dSQ-tr-TlU"/>
-                                    <constraint firstItem="EIm-3h-5LC" firstAttribute="top" secondItem="lPF-6O-7IM" secondAttribute="bottom" constant="8" id="qx0-nr-t7W"/>
-                                    <constraint firstAttribute="bottom" secondItem="EIm-3h-5LC" secondAttribute="bottom" id="wah-Ya-55O"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gdf-FI-fRy">
+                                <rect key="frame" x="20" y="714" width="374" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="yg0-0g-MbR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <state key="normal" title="Update Profile Info">
+                                    <color key="titleColor" name="SecondaryColorAccent"/>
+                                </state>
+                                <connections>
+                                    <action selector="updateProfilePressed:" destination="l5P-Bd-P8m" eventType="touchUpInside" id="Jyd-ao-Qkn"/>
+                                </connections>
+                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lqh-rX-JIu">
-                                <rect key="frame" x="20" y="196" width="374" height="168"/>
+                                <rect key="frame" x="20" y="148" width="374" height="120"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1SV-Dr-C3x">
                                         <rect key="frame" x="0.0" y="30" width="374" height="70"/>
@@ -647,41 +647,53 @@
                                             <constraint firstItem="uGt-4W-j0b" firstAttribute="top" secondItem="1SV-Dr-C3x" secondAttribute="top" id="wzQ-LL-0Nv"/>
                                         </constraints>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gdf-FI-fRy">
-                                        <rect key="frame" x="0.0" y="108" width="374" height="60"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="60" id="yg0-0g-MbR"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
-                                        <state key="normal" title="Update Display Name">
-                                            <color key="titleColor" name="SecondaryColorAccent"/>
-                                        </state>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="Gdf-FI-fRy" secondAttribute="bottom" id="JS0-gO-zUi"/>
                                     <constraint firstAttribute="trailing" secondItem="1SV-Dr-C3x" secondAttribute="trailing" id="PYo-J5-hwQ"/>
                                     <constraint firstItem="1SV-Dr-C3x" firstAttribute="leading" secondItem="Lqh-rX-JIu" secondAttribute="leading" id="Y15-pu-vhe"/>
-                                    <constraint firstItem="Gdf-FI-fRy" firstAttribute="top" secondItem="1SV-Dr-C3x" secondAttribute="bottom" constant="8" id="iqZ-jA-LGm"/>
-                                    <constraint firstAttribute="trailing" secondItem="Gdf-FI-fRy" secondAttribute="trailing" id="m0O-IX-OUO"/>
-                                    <constraint firstAttribute="height" constant="168" id="mmE-75-NRh"/>
-                                    <constraint firstItem="Gdf-FI-fRy" firstAttribute="leading" secondItem="Lqh-rX-JIu" secondAttribute="leading" id="uFg-p1-Zso"/>
+                                    <constraint firstAttribute="height" constant="120" id="mmE-75-NRh"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VrC-dy-VV9">
+                                <rect key="frame" x="0.0" y="276" width="414" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="U3v-RG-eUE">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="U3v-RG-eUE" firstAttribute="bottom" secondItem="bzS-Xn-y3Q" secondAttribute="bottom" id="2g4-Gj-f7B"/>
+                            <constraint firstAttribute="bottom" secondItem="Gdf-FI-fRy" secondAttribute="bottom" constant="34" id="3tm-Jn-UK4"/>
                             <constraint firstItem="6zv-rn-JMf" firstAttribute="leading" secondItem="bzS-Xn-y3Q" secondAttribute="leading" constant="20" id="84t-hu-qrg"/>
+                            <constraint firstAttribute="trailing" secondItem="Gdf-FI-fRy" secondAttribute="trailing" constant="20" id="AIa-An-Yvj"/>
+                            <constraint firstItem="U3v-RG-eUE" firstAttribute="top" secondItem="bzS-Xn-y3Q" secondAttribute="top" id="FtK-l3-5Iv"/>
+                            <constraint firstItem="Gdf-FI-fRy" firstAttribute="top" secondItem="1SV-Dr-C3x" secondAttribute="bottom" constant="466" id="OUn-W0-gao"/>
+                            <constraint firstItem="VrC-dy-VV9" firstAttribute="trailing" secondItem="bzS-Xn-y3Q" secondAttribute="trailing" id="PUG-ar-Rjc"/>
+                            <constraint firstItem="U3v-RG-eUE" firstAttribute="trailing" secondItem="bzS-Xn-y3Q" secondAttribute="trailing" id="Qte-aN-xUQ"/>
                             <constraint firstItem="6zv-rn-JMf" firstAttribute="top" secondItem="bzS-Xn-y3Q" secondAttribute="top" constant="20" id="WVZ-hb-bWa"/>
+                            <constraint firstItem="VrC-dy-VV9" firstAttribute="top" secondItem="Lqh-rX-JIu" secondAttribute="bottom" constant="8" id="XNQ-XD-BFS"/>
                             <constraint firstItem="Lqh-rX-JIu" firstAttribute="top" secondItem="6zv-rn-JMf" secondAttribute="bottom" constant="8" id="XPB-CH-tPZ"/>
+                            <constraint firstItem="Gdf-FI-fRy" firstAttribute="leading" secondItem="I3S-FP-hBQ" secondAttribute="leading" constant="20" id="aOe-zb-IEH"/>
                             <constraint firstItem="bzS-Xn-y3Q" firstAttribute="trailing" secondItem="6zv-rn-JMf" secondAttribute="trailing" constant="20" id="kIG-fG-gMb"/>
                             <constraint firstItem="bzS-Xn-y3Q" firstAttribute="trailing" secondItem="Lqh-rX-JIu" secondAttribute="trailing" constant="20" id="kVL-Vs-xPQ"/>
+                            <constraint firstItem="VrC-dy-VV9" firstAttribute="leading" secondItem="bzS-Xn-y3Q" secondAttribute="leading" id="laF-Ec-m6o"/>
+                            <constraint firstItem="U3v-RG-eUE" firstAttribute="leading" secondItem="bzS-Xn-y3Q" secondAttribute="leading" id="qfI-C6-9xS"/>
                             <constraint firstItem="Lqh-rX-JIu" firstAttribute="leading" secondItem="bzS-Xn-y3Q" secondAttribute="leading" constant="20" id="tHT-2k-aUc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bzS-Xn-y3Q"/>
                     </view>
                     <navigationItem key="navigationItem" id="5XA-E2-sYn"/>
+                    <connections>
+                        <outlet property="displayNameTextfield" destination="DeQ-yn-lll" id="5aT-xk-0dJ"/>
+                        <outlet property="emailTextfield" destination="Gkm-L2-SRd" id="8kL-HR-PMp"/>
+                        <outlet property="errorLabel" destination="VrC-dy-VV9" id="yRr-lt-B4h"/>
+                        <outlet property="loadingIndicator" destination="U3v-RG-eUE" id="qqi-Ga-oab"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zi1-Og-U6h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
