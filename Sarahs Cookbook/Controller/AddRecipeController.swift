@@ -60,7 +60,9 @@ class AddRecipeController: UIViewController {
                 K.Models.Recipe.time: cookTime,
                 K.Models.Recipe.ingredients: ingredients,
                 K.Models.Recipe.directions: directions,
-                K.Models.Recipe.createdOn: Date().timeIntervalSince1970
+                K.Models.Recipe.createdOn: Date().timeIntervalSince1970,
+                K.Models.Recipe.rating: 5,
+                K.Models.Recipe.usersWhoVoted: [userId: 5]
             ]
             if recipeImage.image == #imageLiteral(resourceName: "Cookbook Image Alt") {
                 print("Picture was not changed")

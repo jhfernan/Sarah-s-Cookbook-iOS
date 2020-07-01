@@ -27,7 +27,6 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="DDc-yY-3qj"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="ffb-yu-SxV"/>

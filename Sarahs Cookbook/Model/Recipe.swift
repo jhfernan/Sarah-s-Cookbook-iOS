@@ -17,6 +17,15 @@ struct Recipe {
     let directions: String
     let createdAt: Double
     var path: String = ""
+    let votes: [String: Int]
+    var rating: Double {
+        get {
+            let total = votes.reduce(0) { (total, item) -> Int in
+                return total + item.value
+            }
+            return Double(total / votes.count)
+        }
+    }
     
     init(info: [String: Any]) {
         self.name = info["name"] as! String
@@ -25,6 +34,7 @@ struct Recipe {
         self.ingredients = info["ingredients"] as! String
         self.directions = info["directions"] as! String
         self.createdAt = info["createdAt"] as! Double
+        self.votes = info["votes"] as! [String: Int]
         if let path = info["path"] {
             self.path = path as! String
         }

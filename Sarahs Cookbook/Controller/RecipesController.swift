@@ -46,14 +46,16 @@ class RecipesController: UIViewController {
                             let time = data[K.Models.Recipe.time] as? String,
                             let ingredients = data[K.Models.Recipe.ingredients] as? String,
                             let directions = data[K.Models.Recipe.directions] as? String,
-                            let createdAt = data[K.Models.Recipe.createdOn] as? Double {
+                            let createdAt = data[K.Models.Recipe.createdOn] as? Double,
+                            let votes = data[K.Models.Recipe.usersWhoVoted] as? [String: Int] {
                             var info: [String: Any] = [
                                 K.Models.Recipe.name: name,
                                 K.Models.Recipe.author: author,
                                 K.Models.Recipe.time: time,
                                 K.Models.Recipe.ingredients: ingredients,
                                 K.Models.Recipe.directions: directions,
-                                K.Models.Recipe.createdOn: createdAt
+                                K.Models.Recipe.createdOn: createdAt,
+                                K.Models.Recipe.usersWhoVoted: votes
                             ]
                             if let path = data[K.Models.Recipe.imagePath] as? String {
                                 info[K.Models.Recipe.imagePath] = path
@@ -126,6 +128,8 @@ extension RecipesController {
             destinationVC.recipeAuthorUID = recipe!.user_uid
             destinationVC.recipeIngredients = recipe!.ingredients
             destinationVC.recipeDirections = recipe!.directions
+            destinationVC.recipeRating = recipe!.rating
+            destinationVC.recipeVotes = recipe!.votes
             if let image = recipe?.image {
                 destinationVC.recipeImage = image
             }

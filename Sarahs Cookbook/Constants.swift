@@ -33,6 +33,8 @@ struct K {
             static let directions = "directions"
             static let createdOn = "createdAt"
             static let imagePath = "path"
+            static let rating = "rating"
+            static let usersWhoVoted = "votes"
         }
         
         struct Users {

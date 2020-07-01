@@ -25,6 +25,8 @@ class RecipeController: UIViewController {
     var recipeImage: UIImage = #imageLiteral(resourceName: "Cookbook Image Alt")
     var recipeIngredients: String = "get this stuff"
     var recipeDirections: String = "do this stuff"
+    var recipeRating: Double = 0.0
+    var recipeVotes: [String: Int] = [:]
     
     override func viewDidLoad() {
         super.viewDidLoad()
