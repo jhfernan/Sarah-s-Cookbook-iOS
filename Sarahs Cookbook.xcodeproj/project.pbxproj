@@ -3,11 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		8FFA6A2F90D446BB4A525D8F /* Pods_Sarahs_Cookbook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27359B32F88DF269ECB56CA6 /* Pods_Sarahs_Cookbook.framework */; };
+		AB33876A24AE1EDA00EDE669 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AB33876924AE1EDA00EDE669 /* IQKeyboardManagerSwift */; };
 		AB44ADA124A9D4AD00A327BB /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB44ADA024A9D4AD00A327BB /* ProfileController.swift */; };
 		AB44ADA324AA15A000A327BB /* UserHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB44ADA224AA15A000A327BB /* UserHelpers.swift */; };
 		AB571C7F24A2FA1200F38B28 /* RecipesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB571C7E24A2FA1200F38B28 /* RecipesController.swift */; };
@@ -64,6 +65,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8FFA6A2F90D446BB4A525D8F /* Pods_Sarahs_Cookbook.framework in Frameworks */,
+				AB33876A24AE1EDA00EDE669 /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,6 +177,9 @@
 			dependencies = (
 			);
 			name = "Sarahs Cookbook";
+			packageProductDependencies = (
+				AB33876924AE1EDA00EDE669 /* IQKeyboardManagerSwift */,
+			);
 			productName = "Sarahs Cookbook";
 			productReference = ABE097A2249F6493002AED98 /* Sarahs Cookbook.app */;
 			productType = "com.apple.product-type.application";
@@ -203,6 +208,9 @@
 				Base,
 			);
 			mainGroup = ABE09799249F6493002AED98;
+			packageReferences = (
+				AB33876824AE1EDA00EDE669 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+			);
 			productRefGroup = ABE097A3249F6493002AED98 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -490,6 +498,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AB33876824AE1EDA00EDE669 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.5.5;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AB33876924AE1EDA00EDE669 /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AB33876824AE1EDA00EDE669 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = ABE0979A249F6493002AED98 /* Project object */;
 }
