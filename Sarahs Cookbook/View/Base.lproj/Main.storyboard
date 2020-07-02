@@ -127,7 +127,7 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Input" translatesAutoresizingMaskIntoConstraints="NO" id="iAq-zi-Jkj">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="75"/>
                                     </imageView>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="jhezekiah@gmail.com" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZZg-NG-GId">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZZg-NG-GId">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="75"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="75" id="brk-EH-tJK"/>
@@ -157,7 +157,7 @@
                                             <constraint firstAttribute="height" constant="75" id="U8v-bd-phl"/>
                                         </constraints>
                                     </imageView>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Jc963.52" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ONA-ak-5Wh">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ONA-ak-5Wh">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="75"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="75" id="89E-RY-Rsz"/>
