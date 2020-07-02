@@ -9,6 +9,7 @@
 import UIKit
 
 struct Recipe {
+    let rid: String
     let name: String
     let user_uid: String
     let cookTime: String
@@ -23,19 +24,20 @@ struct Recipe {
             let total = votes.reduce(0) { (total, item) -> Int in
                 return total + item.value
             }
-            return Double(total / votes.count)
+            return Double(total) / Double(votes.count)
         }
     }
     
     init(info: [String: Any]) {
-        self.name = info["name"] as! String
-        self.user_uid = info["user_uid"] as! String
-        self.cookTime = info["cookTime"] as! String
-        self.ingredients = info["ingredients"] as! String
-        self.directions = info["directions"] as! String
-        self.createdAt = info["createdAt"] as! Double
-        self.votes = info["votes"] as! [String: Int]
-        if let path = info["path"] {
+        self.rid = info[K.Models.Recipe.id] as! String
+        self.name = info[K.Models.Recipe.name] as! String
+        self.user_uid = info[K.Models.Recipe.author] as! String
+        self.cookTime = info[K.Models.Recipe.time] as! String
+        self.ingredients = info[K.Models.Recipe.ingredients] as! String
+        self.directions = info[K.Models.Recipe.directions] as! String
+        self.createdAt = info[K.Models.Recipe.createdOn] as! Double
+        self.votes = info[K.Models.Recipe.usersWhoVoted] as! [String: Int]
+        if let path = info[K.Models.Recipe.imagePath] {
             self.path = path as! String
         }
         if let image = info["image"] {

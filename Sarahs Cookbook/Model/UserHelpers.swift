@@ -33,32 +33,32 @@ struct UserHelpers {
         if email != "" && displayName == "" {
             user?.updateEmail(to: email) { (error) in
                 if let err = error {
-                    completion(Res(err: err.localizedDescription, title: nil))
+                    completion(Res(err: err.localizedDescription, message: nil))
                 }
-                completion(Res(err: nil, title: email))
+                completion(Res(err: nil, message: email))
             }
         } else if email == "" && displayName != "" {
             db.collection("users")
                 .document(user!.uid)
                 .setData(["displayName": displayName]) { err in
                 if let err = err {
-                    completion(Res(err: err.localizedDescription, title: nil))
+                    completion(Res(err: err.localizedDescription, message: nil))
                 } else {
-                    completion(Res(err: nil, title: displayName))
+                    completion(Res(err: nil, message: displayName))
                 }
             }
         } else if email != "" && displayName != "" {
             user?.updateEmail(to: email) { (error) in
                 if let err = error {
-                    completion(Res(err: err.localizedDescription, title: nil))
+                    completion(Res(err: err.localizedDescription, message: nil))
                 }
                 db.collection("users")
                     .document(user!.uid)
                     .setData(["displayName": displayName]) { err in
                     if let err = err {
-                        completion(Res(err: err.localizedDescription, title: nil))
+                        completion(Res(err: err.localizedDescription, message: nil))
                     } else {
-                        completion(Res(err: nil, title: displayName))
+                        completion(Res(err: nil, message: displayName))
                     }
                 }
             }
@@ -68,5 +68,5 @@ struct UserHelpers {
 
 struct Res {
     let err: String?
-    let title: String?
+    let message: String?
 }

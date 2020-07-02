@@ -50,6 +50,7 @@ class RecipesController: UIViewController {
                             let votes = data[K.Models.Recipe.usersWhoVoted] as? [String: Int] {
                             var info: [String: Any] = [
                                 K.Models.Recipe.name: name,
+                                K.Models.Recipe.id: doc.documentID,
                                 K.Models.Recipe.author: author,
                                 K.Models.Recipe.time: time,
                                 K.Models.Recipe.ingredients: ingredients,
@@ -107,6 +108,13 @@ extension RecipesController: UITableViewDataSource {
             cell.recipeImage.image = recipe.image
         }
         
+        cell.star1.image = RecipeHelpers.starRatingLogic(star: 1, rating: recipe.rating)
+        cell.star2.image = RecipeHelpers.starRatingLogic(star: 2, rating: recipe.rating)
+        cell.star3.image = RecipeHelpers.starRatingLogic(star: 3, rating: recipe.rating)
+        cell.star4.image = RecipeHelpers.starRatingLogic(star: 4, rating: recipe.rating)
+        cell.star5.image = RecipeHelpers.starRatingLogic(star: 5, rating: recipe.rating)
+        
+        
         return cell
     }
     
@@ -125,6 +133,8 @@ extension RecipesController {
         if segue.identifier == K.Routes.detailFromRecipes {
             let destinationVC = segue.destination as! RecipeController
             destinationVC.recipeName = recipe!.name
+            destinationVC.recipeId = recipe!.rid
+            destinationVC.recipePrepTime = recipe!.cookTime
             destinationVC.recipeAuthorUID = recipe!.user_uid
             destinationVC.recipeIngredients = recipe!.ingredients
             destinationVC.recipeDirections = recipe!.directions

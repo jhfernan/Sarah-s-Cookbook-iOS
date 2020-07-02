@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 struct RecipeHelpers {
     
@@ -22,4 +23,34 @@ struct RecipeHelpers {
 
         return newImage
     }
+
+    static func starRatingLogic(star: Int, rating: Double) -> UIImage {
+        var response: UIImage = UIImage(systemName: "star")!
+        switch star {
+        case 1:
+        if rating >= Double(star) {
+            response = UIImage(systemName: "star.fill")!
+        }
+        case 2:
+        if rating >= Double(star) {
+            response = UIImage(systemName: "star.fill")!
+        }
+        case 3:
+        if rating >= Double(star) {
+            response = UIImage(systemName: "star.fill")!
+        }
+        case 4:
+        if rating >= Double(star) {
+            response = UIImage(systemName: "star.fill")!
+        }
+        case 5:
+        if rating >= Double(star) {
+            response = UIImage(systemName: "star.fill")!
+        }
+        default:
+            response = UIImage(systemName: "star")!
+        }
+        return response
+    }
+    
 }

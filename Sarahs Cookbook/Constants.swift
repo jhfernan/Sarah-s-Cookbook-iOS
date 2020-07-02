@@ -26,6 +26,7 @@ struct K {
     struct Models {
         struct Recipe {
             static let collectionName = "recipes"
+            static let id = "rid"
             static let name = "name"
             static let author = "user_uid"
             static let time = "cookTime"

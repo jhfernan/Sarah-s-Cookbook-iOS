@@ -32,7 +32,7 @@ class ProfileController: UIViewController {
                 self.errorLabel.text = err
                 self.loadingIndicator.stopAnimating()
             } else {
-                self.title = res?.title
+                self.title = res?.message
                 self.loadingIndicator.stopAnimating()
             }
         }
