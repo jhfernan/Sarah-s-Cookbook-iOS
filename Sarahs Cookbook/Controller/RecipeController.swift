@@ -104,7 +104,7 @@ extension RecipeController {
         newVotes[Auth.auth().currentUser!.uid] = vote
         db.collection(K.Models.Recipe.collectionName)
         .document(recipeId)
-        .updateData(newVotes) { (err) in
+            .updateData([K.Models.Recipe.usersWhoVoted: newVotes]) { (err) in
             if let err = err {
                 self.errorLabel.text = err.localizedDescription
                 self.loadingIndicator.stopAnimating()
