@@ -19,6 +19,7 @@ class RecipeController: UIViewController {
     @IBOutlet weak var ingredientsLabel: UILabel!
     @IBOutlet weak var directionsLabel: UILabel!
     @IBOutlet weak var errorLabel: UILabel!
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     
     @IBOutlet weak var star1: UIImageView!
     @IBOutlet weak var star2: UIImageView!
@@ -98,6 +99,7 @@ class RecipeController: UIViewController {
 //MARK: - Voting Logic
 extension RecipeController {
     func addVoteToList(vote: Int) {
+        loadingIndicator.startAnimating()
         var newVotes = recipeVotes
         newVotes[Auth.auth().currentUser!.uid] = vote
         db.collection(K.Models.Recipe.collectionName)
@@ -105,7 +107,10 @@ extension RecipeController {
         .updateData(newVotes) { (err) in
             if let err = err {
                 self.errorLabel.text = err.localizedDescription
+                self.loadingIndicator.stopAnimating()
             } else {
+                self.errorLabel.text = ""
+                self.loadingIndicator.stopAnimating()
                 print("Updated")
             }
         }

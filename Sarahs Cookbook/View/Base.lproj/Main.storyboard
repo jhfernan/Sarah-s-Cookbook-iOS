@@ -197,6 +197,9 @@
                                 <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="82U-7a-0gD">
+                                <rect key="frame" x="197" y="394" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -205,12 +208,14 @@
                             <constraint firstItem="0by-8e-ISo" firstAttribute="trailing" secondItem="fLg-Un-ANe" secondAttribute="trailing" id="8Kb-4m-TWH"/>
                             <constraint firstItem="AEK-1s-0QG" firstAttribute="leading" secondItem="fLg-Un-ANe" secondAttribute="leading" id="Dcx-9r-ihW"/>
                             <constraint firstItem="uco-Tl-U9p" firstAttribute="top" secondItem="fLg-Un-ANe" secondAttribute="top" constant="20" id="IpU-tT-WDc"/>
+                            <constraint firstItem="82U-7a-0gD" firstAttribute="centerX" secondItem="tgm-g0-HI4" secondAttribute="centerX" id="Ksz-5R-8v1"/>
                             <constraint firstItem="fLg-Un-ANe" firstAttribute="trailing" secondItem="QRw-Sz-JuZ" secondAttribute="trailing" constant="20" id="QOi-t6-nt9"/>
                             <constraint firstItem="QRw-Sz-JuZ" firstAttribute="top" secondItem="uco-Tl-U9p" secondAttribute="bottom" constant="8" id="cT7-D4-CQv"/>
                             <constraint firstItem="fLg-Un-ANe" firstAttribute="trailing" secondItem="uco-Tl-U9p" secondAttribute="trailing" constant="20" id="fOj-dq-TRa"/>
                             <constraint firstItem="AEK-1s-0QG" firstAttribute="trailing" secondItem="fLg-Un-ANe" secondAttribute="trailing" id="jW9-EG-m9s"/>
                             <constraint firstItem="0by-8e-ISo" firstAttribute="top" secondItem="AEK-1s-0QG" secondAttribute="bottom" constant="8" id="nJh-0W-6Xh"/>
                             <constraint firstItem="uco-Tl-U9p" firstAttribute="leading" secondItem="fLg-Un-ANe" secondAttribute="leading" constant="20" id="ocN-bh-4Fw"/>
+                            <constraint firstItem="82U-7a-0gD" firstAttribute="centerY" secondItem="tgm-g0-HI4" secondAttribute="centerY" id="yKi-YD-Sf1"/>
                             <constraint firstItem="AEK-1s-0QG" firstAttribute="top" secondItem="QRw-Sz-JuZ" secondAttribute="bottom" constant="8" id="yZF-Db-LtO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fLg-Un-ANe"/>
@@ -219,6 +224,7 @@
                     <connections>
                         <outlet property="emailTextfield" destination="ZZg-NG-GId" id="Bzr-rV-4Sw"/>
                         <outlet property="errorLabel" destination="0by-8e-ISo" id="5pa-Ug-yir"/>
+                        <outlet property="loadingIndicator" destination="82U-7a-0gD" id="yEg-YN-dcH"/>
                         <outlet property="passwordTextfield" destination="ONA-ak-5Wh" id="ZUT-8G-sGb"/>
                         <segue destination="PQC-j0-2U7" kind="show" identifier="LogInToHome" id="ucf-pp-2AF"/>
                     </connections>
@@ -712,6 +718,9 @@
                                                         <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
+                                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="jct-Mb-2WX">
+                                                        <rect key="frame" x="165" y="57" width="20" height="20"/>
+                                                    </activityIndicatorView>
                                                 </subviews>
                                                 <color key="backgroundColor" name="SecondaryColor"/>
                                                 <constraints>
@@ -720,9 +729,11 @@
                                                     <constraint firstAttribute="height" constant="134" id="Euj-27-Xrm"/>
                                                     <constraint firstItem="hxJ-XW-CjH" firstAttribute="top" secondItem="qWt-bG-rBr" secondAttribute="bottom" constant="8" symbolic="YES" id="NjV-TO-5Gm"/>
                                                     <constraint firstItem="Dv1-rY-ibD" firstAttribute="centerX" secondItem="qWt-bG-rBr" secondAttribute="centerX" id="Pc8-cW-xUQ"/>
+                                                    <constraint firstItem="jct-Mb-2WX" firstAttribute="centerX" secondItem="NwO-bR-OI1" secondAttribute="centerX" id="RZF-ef-wCG"/>
                                                     <constraint firstAttribute="width" constant="350" id="ifx-W2-GBy"/>
                                                     <constraint firstItem="Dv1-rY-ibD" firstAttribute="top" secondItem="NwO-bR-OI1" secondAttribute="top" constant="14.5" id="pde-hg-60w"/>
                                                     <constraint firstItem="qWt-bG-rBr" firstAttribute="centerX" secondItem="NwO-bR-OI1" secondAttribute="centerX" id="sQr-67-6eM"/>
+                                                    <constraint firstItem="jct-Mb-2WX" firstAttribute="centerY" secondItem="NwO-bR-OI1" secondAttribute="centerY" id="xHd-gu-lX9"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -788,6 +799,7 @@
                         <outlet property="errorLabel" destination="hxJ-XW-CjH" id="XCj-LE-Xnb"/>
                         <outlet property="imageOfRecipe" destination="x4N-y4-eXn" id="bZK-eJ-EvG"/>
                         <outlet property="ingredientsLabel" destination="CpR-pQ-ocG" id="qrO-UF-uOy"/>
+                        <outlet property="loadingIndicator" destination="jct-Mb-2WX" id="oA1-Zk-Jn2"/>
                         <outlet property="nameLabel" destination="jzk-YQ-hi7" id="Npm-7E-Nkx"/>
                         <outlet property="prepTimeLabel" destination="0Dl-SM-hDA" id="UO3-XU-PWr"/>
                         <outlet property="ratingLabel" destination="UvQ-de-SwR" id="IOK-SH-XFe"/>
@@ -1342,9 +1354,13 @@
                                 <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="s4e-0J-5Ml">
+                                <rect key="frame" x="197" y="394" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="s4e-0J-5Ml" firstAttribute="centerY" secondItem="Qbe-RJ-xIQ" secondAttribute="centerY" id="00s-yF-rMV"/>
                             <constraint firstItem="vd1-fv-6h8" firstAttribute="trailing" secondItem="jJy-0w-ak1" secondAttribute="trailing" id="2Dm-SP-Muy"/>
                             <constraint firstItem="vd1-fv-6h8" firstAttribute="trailing" secondItem="E7a-KO-OfM" secondAttribute="trailing" constant="20" id="Bfa-5J-5dw"/>
                             <constraint firstItem="vd1-fv-6h8" firstAttribute="trailing" secondItem="eLw-dD-jJ3" secondAttribute="trailing" constant="20" id="Efe-Qa-tvm"/>
@@ -1356,6 +1372,7 @@
                             <constraint firstItem="eLw-dD-jJ3" firstAttribute="leading" secondItem="vd1-fv-6h8" secondAttribute="leading" constant="20" id="jwH-GD-GEC"/>
                             <constraint firstItem="eLw-dD-jJ3" firstAttribute="top" secondItem="vd1-fv-6h8" secondAttribute="top" constant="20" id="pTu-xY-LwJ"/>
                             <constraint firstItem="k5X-Wh-J3Y" firstAttribute="trailing" secondItem="vd1-fv-6h8" secondAttribute="trailing" id="rbn-MN-6S0"/>
+                            <constraint firstItem="s4e-0J-5Ml" firstAttribute="centerX" secondItem="Qbe-RJ-xIQ" secondAttribute="centerX" id="yxw-TO-8JX"/>
                             <constraint firstItem="k5X-Wh-J3Y" firstAttribute="leading" secondItem="vd1-fv-6h8" secondAttribute="leading" id="zGs-On-I96"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vd1-fv-6h8"/>
@@ -1364,6 +1381,7 @@
                     <connections>
                         <outlet property="emailTextfield" destination="Nxg-2X-rjZ" id="Vw8-95-hnk"/>
                         <outlet property="errorLabel" destination="jJy-0w-ak1" id="wBB-Hn-qBQ"/>
+                        <outlet property="loadingIndicator" destination="s4e-0J-5Ml" id="Cfu-xf-hoZ"/>
                         <outlet property="passwordTextfield" destination="INn-Zq-UBA" id="sYX-nK-Ion"/>
                         <segue destination="PQC-j0-2U7" kind="show" identifier="RegisterToHome" id="st8-pg-hj9"/>
                     </connections>
@@ -1397,7 +1415,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ucf-pp-2AF"/>
+        <segue reference="st8-pg-hj9"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Cookbook Image" width="72.5" height="67"/>
