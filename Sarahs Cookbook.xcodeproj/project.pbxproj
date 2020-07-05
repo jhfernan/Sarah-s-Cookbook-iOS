@@ -16,9 +16,9 @@
 		AB571C8324A2FD3D00F38B28 /* RecipeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB571C8224A2FD3D00F38B28 /* RecipeController.swift */; };
 		AB571C8624A3011000F38B28 /* RecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB571C8424A3011000F38B28 /* RecipeCell.swift */; };
 		AB571C8724A3011000F38B28 /* RecipeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB571C8524A3011000F38B28 /* RecipeCell.xib */; };
+		AB5985E824B1501800F615EE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB5985E724B1501800F615EE /* GoogleService-Info.plist */; };
 		AB64FD5F24A5B14300A75CAB /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB64FD5E24A5B14300A75CAB /* Recipe.swift */; };
 		ABD35DFA24A109F10073135E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD35DF924A109F10073135E /* Constants.swift */; };
-		ABD35DFC24A1AF260073135E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ABD35DFB24A1AF250073135E /* GoogleService-Info.plist */; };
 		ABE097A6249F6493002AED98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE097A5249F6493002AED98 /* AppDelegate.swift */; };
 		ABE097A8249F6493002AED98 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE097A7249F6493002AED98 /* SceneDelegate.swift */; };
 		ABE097AA249F6493002AED98 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE097A9249F6493002AED98 /* MenuController.swift */; };
@@ -42,9 +42,9 @@
 		AB571C8224A2FD3D00F38B28 /* RecipeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeController.swift; sourceTree = "<group>"; };
 		AB571C8424A3011000F38B28 /* RecipeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCell.swift; sourceTree = "<group>"; };
 		AB571C8524A3011000F38B28 /* RecipeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeCell.xib; sourceTree = "<group>"; };
+		AB5985E724B1501800F615EE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AB64FD5E24A5B14300A75CAB /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		ABD35DF924A109F10073135E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		ABD35DFB24A1AF250073135E /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		ABE097A2249F6493002AED98 /* Sarahs Cookbook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sarahs Cookbook.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABE097A5249F6493002AED98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABE097A7249F6493002AED98 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -118,7 +118,7 @@
 				ABE097AE249F6495002AED98 /* Assets.xcassets */,
 				ABD35DF924A109F10073135E /* Constants.swift */,
 				ABE097B3249F6495002AED98 /* Info.plist */,
-				ABD35DFB24A1AF250073135E /* GoogleService-Info.plist */,
+				AB5985E724B1501800F615EE /* GoogleService-Info.plist */,
 				ABE097B0249F6495002AED98 /* LaunchScreen.storyboard */,
 			);
 			path = "Sarahs Cookbook";
@@ -226,8 +226,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABE097B2249F6495002AED98 /* LaunchScreen.storyboard in Resources */,
-				ABD35DFC24A1AF260073135E /* GoogleService-Info.plist in Resources */,
 				AB571C8724A3011000F38B28 /* RecipeCell.xib in Resources */,
+				AB5985E824B1501800F615EE /* GoogleService-Info.plist in Resources */,
 				ABE097AF249F6495002AED98 /* Assets.xcassets in Resources */,
 				ABE097AD249F6493002AED98 /* Main.storyboard in Resources */,
 			);
@@ -442,14 +442,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Z3392E9L93;
+				DEVELOPMENT_TEAM = 2H75S9K277;
 				INFOPLIST_FILE = "Sarahs Cookbook/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jonathanhfernandes.Sarahs-Cookbook";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jonathanhfei.Sarahs-Cookbook";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -462,14 +462,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Z3392E9L93;
+				DEVELOPMENT_TEAM = 2H75S9K277;
 				INFOPLIST_FILE = "Sarahs Cookbook/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jonathanhfernandes.Sarahs-Cookbook";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jonathanhfei.Sarahs-Cookbook";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
